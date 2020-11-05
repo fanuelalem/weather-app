@@ -1,41 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="index.css">
-  <title>Weather Dashboard</title>
-</head>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <!-- Header -->
 
-<body>
-  <header class="container-fluid text-center text-white bg-dark p-2">
-    <h1>Weather Dashboard</h1>
-  </header>
+    <nav class="navbar navbar-dark bg-dark mb-5">
+        <span class="navbar-brand mb-0 h1 mx-auto">Weather Dashboard</span>
+    </nav>
 
-  <div class="container-fluid">
-    <div class="row">
-      <aside class="col-lg-3 bg-light list-side">
-        <h5 class="mt-1">Search for a City:</h5>
-        <div class="form-inline form-group">
-          <input class="form-control" type="text" id="search-value" />
-          <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i> </button>
+    <!-- Container -->
+    <div class="container">
+
+        
+        <div class="row">
+            <!-- search bar and history section -->
+            <div class="col-4">
+                <!-- Input to enter city -->
+                <form>
+                    <div class="form-group">
+                      <label for="city">City</label>
+                      <input type="text" class="form-control" id="city" placeholder="Enter a city here.">
+                    </div>
+                    
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                  </form>
+
+                  <hr>
+
+                  <!-- Recent history section -->
+                  <h6>Recent Searches</h6>
+                  <div id="searchHistory"></div>
+                  
+            </div>
+
+            <!-- main content: current weather and future forecast -->
+            <div class="col-8" id="fullWeather">
+                <!-- Current weather row -->
+                <div>
+                    <h3 id="searched-city"></h3>
+                    <img id="weather-icon">
+                    <p id="current-temp"></p>
+                    <p id="current-humidity"></p>
+                    <p id="current-wind"></p>
+                    <p id="uv-index"></p>
+                </div>
+
+                <!-- Future weather row -->
+                <div id="fiveDayForecast">
+                    
+                </div>
+                
+
+            </div>
         </div>
-
-        <ul class="list-group history "></ul>
-      </aside>
-       <div class="col-lg-8">
-        <div id="today" class="mt-3"></div>
-        <div id="forecast" class="mt-3"></div>
-      </div>
+            
     </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="index.js"></script></body>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
