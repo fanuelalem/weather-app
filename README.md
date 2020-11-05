@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-https://guillermo-martin.github.io/weatherDashboard/
+https://fanuelalem.github.io/weather-app/
 
 ## Description
 <!-- * What does the app do? -->
